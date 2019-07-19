@@ -1,0 +1,23 @@
+---
+
+- name: Remove default users
+  ignore_errors: True
+  with_items:
+    - ubuntu
+    - pi
+  user:
+    name: "{{ item }}"
+    state: absent
+    remove: yes
+
+
+- name: Setup users
+  with_items: "{{ user_list }}"
+  user:
+    name: "{{ item.name }}"
+
+- name: Setup authorizes_keys based on github.com
+  with_items: "{{ user_list }}"
+  authorized_key:
+    user: "{{ item.name }}"
+    key: "https://github.com/{{ item.github_username | default(item.name) }}.keys"
