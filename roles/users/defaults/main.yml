@@ -1,4 +1,4 @@
 ---
 
 user_list:
-  - { name: maciej-wilczynski }
+  - { name: maciej-wilczynski, groups: system-administrator }
