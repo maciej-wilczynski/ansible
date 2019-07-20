@@ -8,6 +8,3 @@ logfile: /var/log/ansible-pull.log
 
 # Repository to check out
 repo_url: git://github.com/maciej-wilczynski/ansible.git
-
-# setup env ROLE
-env_role: common
