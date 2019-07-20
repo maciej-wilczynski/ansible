@@ -15,6 +15,7 @@
   with_items: "{{ user_list }}"
   user:
     name: "{{ item.name }}"
+    groups: "{{ item.groups }}"
     shell: /bin/bash
 
 - name: Setup authorizes_keys based on github.com
