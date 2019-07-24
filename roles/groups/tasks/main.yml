@@ -7,6 +7,6 @@
 
 - name: Ensuring that administration group is able to use sudo without password
   lineinfile:
-    path: "/etc/sudoers.d/{{ groups__admin_group }}"
+    dest: "/etc/sudoers.d/{{ groups__admin_group }}"
     line: "%{{ groups__admin_group }} ALL=(ALL) NOPASSWD: ALL"
     validate: 'visudo -cf %s'
