@@ -9,4 +9,5 @@
   lineinfile:
     dest: "/etc/sudoers.d/{{ groups__admin_group }}"
     line: "%{{ groups__admin_group }} ALL=(ALL) NOPASSWD: ALL"
+    create: yes
     validate: 'visudo -cf %s'
