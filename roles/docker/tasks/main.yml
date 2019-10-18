@@ -16,3 +16,4 @@
     name: docker-ce
     state: latest
     update_cache: yes
+    install_recommends: no
