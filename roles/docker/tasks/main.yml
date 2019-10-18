@@ -10,3 +10,9 @@
     repo: "deb https://download.docker.com/linux/raspbian/ {{ ansible_distribution_release }} stable"
     state: present
     filename: docker
+
+- name: Keep docker-ce package in latest version
+  apt:
+    name: docker-ce
+    state: latest
+    update_cache: yes
