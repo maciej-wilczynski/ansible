@@ -7,6 +7,6 @@
 
 - name: Add a docker repository
   apt_repository:
-    repo: "deb https://download.docker.com/linux/raspbian/ {{ ansible_distribution_release }} main"
+    repo: "deb https://download.docker.com/linux/raspbian/ {{ ansible_distribution_release }} stable"
     state: present
     filename: docker
