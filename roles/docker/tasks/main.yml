@@ -1,0 +1,12 @@
+---
+
+- name: Add a docker Apt signing key
+  apt_key:
+    url: https://download.docker.com/linux/raspbian/gpg
+    state: present
+
+- name: Add a docker repository
+  apt_repository:
+    repo: "deb https://download.docker.com/linux/raspbian/ {{ ansible_distribution_release }} main"
+    state: present
+    filename: docker
