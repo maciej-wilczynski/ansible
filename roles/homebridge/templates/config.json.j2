@@ -1,0 +1,19 @@
+{
+    "bridge": {
+        "name": "{{ homebridge__name }}",
+        "username": "{{ homebridge__username }}",
+        "port": {{ homebridge__port }},
+        "pin": "{{ homebridge__pin }}"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "platform": "LifxLan",
+            "name": "LiFx"
+        },
+        {
+            "platform": "yeelight",
+            "name": "Yeelight"
+        }
+    ]
+}

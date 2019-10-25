@@ -1,0 +1,24 @@
+---
+
+- name: Configure HomeBridge files
+  template:
+    src: "{{ item }}.j2"
+    dest: "/root/docker/homebridge/{{ item }}"
+  with_items:
+    - config.json
+    - package.json
+    - startup.sh
+  notify: Restart HomeBridge
+
+- name: Start HomeBridge Container
+  docker_container:
+    name: homebridge
+    image: oznu/homebridge:arm32v6
+    state: started
+    restart_policy: always
+    network_mode: host
+    volumes:
+      - /root/docker/homebridge:/homebridge
+    env:
+        HOMEBRIDGE_CONFIG_UI=1
+        HOMEBRIDGE_CONFIG_UI_PORT=80

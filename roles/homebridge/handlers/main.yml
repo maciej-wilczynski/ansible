@@ -1,0 +1,7 @@
+---
+
+- name: Restart HomeBridge
+  docker_container:
+    name: homebridge
+    state: started
+    restart: yes

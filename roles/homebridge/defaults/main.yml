@@ -1,0 +1,11 @@
+---
+
+homebridge__name: "Homebridge Dom"
+homebridge__port: 52428
+homebridge__username: "{{ vault_homebridge__username }}"
+homebridge__pin: "{{ vault_homebridge__pin }}"
+
+homebridge__dependencies:
+ - { name: "homebridge-dummy", version: "0.4.0" }
+ - { name: "homebridge-lifx-lan", version: "0.2.6" }
+ - { name: "homebridge-yeelight-wifi", version: "1.0.7" }
