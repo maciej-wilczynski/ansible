@@ -13,7 +13,7 @@
 
 - name: Keep docker-ce and docker-compose packages in latest version
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: latest
     update_cache: yes
     install_recommends: no
