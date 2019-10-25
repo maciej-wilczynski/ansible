@@ -11,9 +11,12 @@
     state: present
     filename: docker
 
-- name: Keep docker-ce package in latest version
+- name: Keep docker-ce and docker-compose packages in latest version
   apt:
-    name: docker-ce
+    name: {{ item }}
     state: latest
     update_cache: yes
     install_recommends: no
+  with_items:
+    - docker-ce
+    - docker-compose
