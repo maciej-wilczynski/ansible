@@ -3,7 +3,7 @@
 - name: Configure HomeBridge files
   template:
     src: "{{ item }}.j2"
-    dest: "/root/docker/homebridge/{{ item }}.j2"
+    dest: "/root/docker/homebridge/{{ item }}"
   with_items:
     - config.json
     - package.json
