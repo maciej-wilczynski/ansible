@@ -1,2 +1,3 @@
 # Cron job to git clone/pull a repo and then run locally
+ANSIBLE_VAULT_PASSWORD_FILE="/root/.vault_pass"
 {{ schedule }} root ansible-pull -o -U {{ repo_url }} >>{{ logfile }} 2>&1
