@@ -1,0 +1,6 @@
+---
+
+homebridge__name: "Homebridge Dom"
+homebridge__port: 52428
+homebridge__username: "{{ vault_homebridge__username }}"
+homebridge__pin: "{{ vault_homebridge__pin }}"
