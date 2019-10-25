@@ -1,6 +1,6 @@
 ---
 
-- name: Retart HomeBridge
+- name: Restart HomeBridge
   docker_container:
     name: homebridge
     state: started
