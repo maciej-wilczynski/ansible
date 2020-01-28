@@ -3,7 +3,7 @@
   "description": "This file keeps track of which plugins should be installed.",
   "dependencies": {
 {% for plugin in homebridge__dependencies %}
-    "{{ plugin.name }}": "^{{ plugin.version }}",
+    "{{ plugin.name }}": "^{{ plugin.version }}"{{ "," if not loop.last }}
 {% endfor %}
   }
 }
